@@ -380,7 +380,7 @@ header.scrolled {
 }
 .scroll-hint span { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
 .scroll-line {
-    width: 1px; height: 44px;
+    width: 1px; height: 25px;
     background: linear-gradient(to bottom, var(--red), transparent);
     animation: scrollPulse 2s infinite;
 }
