@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>MG Transportes | Transporte e Distribuição para o Agronegócio</title>
+    <meta name="description" content="Transporte de insumos agrícolas com segurança, agilidade e compromisso em todo o Brasil.">
 
-    <meta name="description"
-        content="Transporte de insumos agrícolas com segurança, agilidade e compromisso em todo o Brasil.">
-
-    <!-- Fontes do Google (Poppins para dar um ar mais moderno) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-    <!-- Animação de Scroll (AOS) -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Seu Estilo -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header id="header">
-        <div class="container nav">
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="loader-bar"></div>
+        <span class="loader-text">MG TRANSPORTES</span>
+    </div>
 
-            <img src="assets/logo.jpg" class="logo" alt="MG Transportes">
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav-wrap">
+            <a href="#"><img src="assets/logo.jpg" class="logo" alt="MG Transportes"></a>
 
             <nav id="nav-menu">
                 <a href="#sobre" class="nav-link">Sobre</a>
@@ -38,207 +32,219 @@
                 <a href="#frota" class="nav-link">Frota</a>
                 <a href="#contato" class="nav-link">Contato</a>
             </nav>
-            
-            <!-- Botão Mobile (Opcional) -->
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
 
+            <button class="mobile-menu-btn" id="mobile-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="mobile-overlay" id="mobile-overlay">
+            <button class="mobile-close" id="mobile-close"><i class="fas fa-times"></i></button>
+            <nav class="mobile-nav">
+                <a href="#sobre" class="mobile-link">Sobre</a>
+                <a href="#servicos" class="mobile-link">Serviços</a>
+                <a href="#frota" class="mobile-link">Frota</a>
+                <a href="#contato" class="mobile-link">Contato</a>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
-
+    <!-- HERO -->
+    <section class="hero" id="hero">
         <div class="overlay"></div>
+        <div id="particles"></div>
 
         <div class="hero-content">
-            <!-- Classes de animação CSS puro para o Hero -->
-            <h1 class="fade-in-down">
-                MG Transportes
-            </h1>
-
-            <h2 class="fade-in-down delay-1">
-                Soluções em Transporte e Distribuição para o Agronegócio
-            </h2>
-
-            <p class="fade-in-down delay-2">
-                Agilidade, segurança e compromisso na entrega de insumos agrícolas em todo o Brasil.
-            </p>
-
-            <div class="buttons fade-in-down delay-3">
-
-                <a href="#contato" class="btn-primary">
-                    Solicitar Orçamento
-                </a>
-
-                <a href="https://wa.me/5500000000000" class="btn-secondary" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
+            <div class="hero-tag">
+                <span class="dot"></span> Agronegócio Brasileiro
             </div>
+            <h1>
+                <span class="h1-line">MG</span>
+                <span class="h1-line red">Transportes</span>
+            </h1>
+            <h2>Soluções em Transporte e Distribuição para o Agronegócio</h2>
+            <p>Agilidade, segurança e compromisso na entrega de insumos agrícolas em todo o Brasil.</p>
+            <div class="buttons">
+                <a href="#contato" class="btn-primary"><span>Solicitar Orçamento</span> <i class="fas fa-arrow-right"></i></a>
+                <a href="https://wa.me/5562981682393" class="btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-row"><span class="stat-num" data-target="5">0</span><span class="stat-sign">+</span></div>
+                    <p>Anos de experiência</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-row"><span class="stat-num" data-target="100">0</span><span class="stat-sign">%</span></div>
+                    <p>Entregas no prazo</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-row"><span class="stat-num" data-target="26">0</span><span class="stat-sign">+</span></div>
+                    <p>Estados atendidos</p>
+                </div>
+            </div>
+        </div>
 
+        <div class="scroll-hint">
+            <span>Role para baixo</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
+    <!-- SOBRE -->
     <section id="sobre" class="sobre">
         <div class="container about-grid">
-
-            <div data-aos="fade-right">
-                <h2 class="section-title">Quem Somos</h2>
-                <p>
-                    A MG Transportes atua no transporte de insumos agrícolas com eficiência,
-                    segurança e pontualidade.
-                    <br><br>
-                    Contamos com frota preparada e profissionais qualificados para garantir
-                    que sua carga llegue ao destino com total confiabilidade.
-                </p>
+            <div class="about-text" data-aos="fade-right">
+                <span class="section-tag">Quem Somos</span>
+                <h2>Especialistas em logística para o campo</h2>
+                <p>A MG Transportes atua no transporte de insumos agrícolas com eficiência, segurança e pontualidade. Contamos com frota preparada e profissionais qualificados para garantir que sua carga chegue ao destino com total confiabilidade.</p>
+                <p>Nossa missão é ser o elo confiável entre produtores rurais e distribuidores, movendo o agronegócio brasileiro com responsabilidade e tecnologia.</p>
+                <a href="#contato" class="btn-outline">Fale Conosco <i class="fas fa-arrow-right"></i></a>
             </div>
-
-            <div data-aos="fade-left" class="image-container">
-                <img src="assets/caminhao.jpg" alt="Caminhão MG Transportes">
+            <div class="about-img-wrap" data-aos="fade-left">
+                <div class="img-frame">
+                    <img src="assets/caminhao.jpg" alt="Caminhão MG Transportes">
+                    <div class="img-badge"><i class="fas fa-shield-alt"></i><span>Carga Segurada</span></div>
+                </div>
             </div>
-
         </div>
     </section>
 
+    <!-- SERVIÇOS -->
     <section id="servicos" class="servicos">
-
         <div class="container">
-
-            <h2 class="section-title" data-aos="fade-up">Nossos Serviços</h2>
-
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">O que fazemos</span>
+                <h2>Nossos Serviços</h2>
+                <p class="section-sub">Transporte especializado para cada tipo de insumo agrícola</p>
+            </div>
             <div class="cards">
-
-                <!-- Card 1 -->
-                <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="card-img-box">
-                        <img src="assets/po-rocha.jpg" alt="Pó de Rocha">
-                    </div>
-                    <div class="card-content">
-                        <i class="fas fa-mountain icon"></i>
-                        <h3>Pó de Rocha</h3>
-                        <p>Transporte especializado para correção e enriquecimento do solo agrícola.</p>
-                    </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-img-box"><img src="assets/po-rocha.jpg" alt="Pó de Rocha"><div class="card-icon-over"><i class="fas fa-mountain"></i></div></div>
+                    <div class="card-body"><h3>Pó de Rocha</h3><p>Transporte especializado para correção e enriquecimento do solo agrícola.</p><span class="card-tag">Corretivo de Solo</span></div>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card-img-box">
-                        <img src="assets/calcario.png" alt="Calcário">
-                    </div>
-                    <div class="card-content">
-                        <i class="fas fa-truck-moving icon"></i>
-                        <h3>Calcário</h3>
-                        <p>Logística eficiente para distribuição de calcário agrícola.</p>
-                    </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img-box"><img src="assets/calcario.png" alt="Calcário"><div class="card-icon-over"><i class="fas fa-truck-moving"></i></div></div>
+                    <div class="card-body"><h3>Calcário</h3><p>Logística eficiente para distribuição de calcário agrícola em todo o Brasil.</p><span class="card-tag">Insumo Agrícola</span></div>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="card-img-box">
-                        <img src="assets/esterco.jpg" alt="Esterco">
-                    </div>
-                    <div class="card-content">
-                        <i class="fas fa-leaf icon"></i>
-                        <h3>Esterco</h3>
-                        <p>Movimentação e entrega de fertilizantes orgânicos.</p>
-                    </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-img-box"><img src="assets/esterco.jpg" alt="Esterco"><div class="card-icon-over"><i class="fas fa-leaf"></i></div></div>
+                    <div class="card-body"><h3>Esterco</h3><p>Movimentação e entrega de fertilizantes orgânicos com cuidado e agilidade.</p><span class="card-tag">Fertilizante Orgânico</span></div>
                 </div>
-
-                <!-- Card 4 -->
-                <div class="card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="card-img-box">
-                        <img src="assets/adubo.webp" alt="Adubo">
-                    </div>
-                    <div class="card-content">
-                        <i class="fas fa-seedling icon"></i>
-                        <h3>Adubo</h3>
-                        <p>Distribuição de adubos para aumento da produtividade.</p>
-                    </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-img-box"><img src="assets/adubo.webp" alt="Adubo"><div class="card-icon-over"><i class="fas fa-seedling"></i></div></div>
+                    <div class="card-body"><h3>Adubo</h3><p>Distribuição de adubos para aumento da produtividade rural.</p><span class="card-tag">Fertilizante</span></div>
                 </div>
-
-                <!-- Card 5 -->
-                <div class="card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="card-img-box">
-                        <img src="assets/gesso.jpg" alt="Gesso">
-                    </div>
-                    <div class="card-content">
-                        <i class="fas fa-industry icon"></i>
-                        <h3>Gesso</h3>
-                        <p>Transporte de gesso agrícola para correção do solo.</p>
-                    </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-img-box"><img src="assets/gesso.jpg" alt="Gesso"><div class="card-icon-over"><i class="fas fa-industry"></i></div></div>
+                    <div class="card-body"><h3>Gesso Agrícola</h3><p>Transporte de gesso agrícola para correção e melhoria do solo.</p><span class="card-tag">Corretivo</span></div>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- DIFERENCIAIS -->
     <section class="diferenciais">
+        <div class="dif-bg-text">EXCELÊNCIA</div>
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Por que escolher a gente?</h2>
-            <div class="diferenciais-grid">
-
-                <div class="diff-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="diff-icon">🚚</div>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Nossos Diferenciais</span>
+                <h2>Por que escolher a gente?</h2>
+            </div>
+            <div class="dif-grid">
+                <div class="dif-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="dif-num">01</span>
+                    <div class="dif-icon"><i class="fas fa-truck"></i></div>
                     <h3>Frota Moderna</h3>
-                    <p>Caminhões próprios, monitoramento 24h.</p>
+                    <p>Caminhões próprios com manutenção preventiva, rastreamento satelital e monitoramento 24 horas.</p>
+                    <div class="dif-line"></div>
                 </div>
-
-                <div class="diff-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="diff-icon">⏱️</div>
+                <div class="dif-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="dif-num">02</span>
+                    <div class="dif-icon"><i class="fas fa-clock"></i></div>
                     <h3>Entregas Pontuais</h3>
-                    <p>Compromisso com o prazo combinado.</p>
+                    <p>Comprometimento total com prazos combinados. Seu planejamento não pode parar por atraso.</p>
+                    <div class="dif-line"></div>
                 </div>
-
-                <div class="diff-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="diff-icon">🛡️</div>
+                <div class="dif-item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="dif-num">03</span>
+                    <div class="dif-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>Segurança Total</h3>
-                    <p>Seguro de carga e rastreamento.</p>
+                    <p>Seguro de carga completo, motoristas experientes e protocolos rigorosos em cada viagem.</p>
+                    <div class="dif-line"></div>
                 </div>
-
-                <div class="diff-card" data-aos="flip-left" data-aos-delay="400">
-                    <div class="diff-icon">🌎</div>
-                    <h3>Brasil-wide</h3>
-                    <p>Atendemos todo o território nacional.</p>
+                <div class="dif-item" data-aos="fade-up" data-aos-delay="400">
+                    <span class="dif-num">04</span>
+                    <div class="dif-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Cobertura Nacional</h3>
+                    <p>Atendemos todo o território brasileiro, de norte a sul, com a mesma eficiência e dedicação.</p>
+                    <div class="dif-line"></div>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- FROTA -->
     <section id="frota" class="galeria">
-        <h2 class="section-title" data-aos="fade-up">Nossa Frota</h2>
-        <div class="gallery">
-            <img src="assets/frota1.jpg" data-aos="fade-up">
-            <img src="assets/frota2.jpg" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/frota3.jpg" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/frota4.jpg" data-aos="fade-up" data-aos-delay="300">
-        </div>
-    </section>
-
-    <section id="contato" class="cta">
-        <div class="cta-content" data-aos="zoom-in">
-            <h2>Precisa transportar sua carga com segurança?</h2>
-            <p>Solicite agora mesmo um orçamento sem compromisso.</p>
-            <a href="#" class="btn-white pulse">Solicitar Orçamento</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <img src="assets/logo.png" class="footer-logo" alt="MG Transportes Logo">
-            
-            <div class="footer-links">
-                <a href="tel:000000000000"><i class="fas fa-phone"></i> (00) 00000-0000</a>
-                <a href="mailto:contato@mgtransportes.com.br"><i class="fas fa-envelope"></i> contato@mgtransportes.com.br</a>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Estrutura</span>
+                <h2>Nossa Frota</h2>
+                <p class="section-sub">Veículos preparados para qualquer desafio logístico</p>
             </div>
-            
+            <div class="gallery">
+                <img src="assets/frota1.jpg" alt="Frota 1" data-aos="zoom-in" data-aos-delay="100">
+                <img src="assets/frota2.jpg" alt="Frota 2" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/frota3.jpg" alt="Frota 3" data-aos="zoom-in" data-aos-delay="300">
+                <img src="assets/frota4.jpg" alt="Frota 4" data-aos="zoom-in" data-aos-delay="400">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO / CTA -->
+    <section id="contato" class="cta">
+        <div class="container">
+            <div class="cta-inner" data-aos="zoom-in">
+                <span class="section-tag" style="color:rgba(255,255,255,0.6)">Entre em contato</span>
+                <h2>Precisa transportar sua carga com segurança?</h2>
+                <p>Solicite agora mesmo um orçamento sem compromisso. Respondemos rápido!</p>
+                <div class="cta-contacts">
+                    <a href="https://wa.me/5562981682393" class="cta-card" target="_blank">
+                        <div class="cta-icon"><i class="fas fa-phone"></i></div>
+                        <div class="cta-card-text">
+                            <span>Ligue ou WhatsApp</span>
+                            <strong>(62) 98168-2393</strong>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/mg_transportes01/" class="cta-card" target="_blank">
+                        <div class="cta-icon"><i class="fab fa-instagram"></i></div>
+                        <div class="cta-card-text">
+                            <span>Instagram</span>
+                            <strong>@mg_transportes01</strong>
+                        </div>
+                    </a>
+                </div>
+                <a href="https://wa.me/5562981682393" class="btn-white pulse" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-inner">
+            <img src="assets/logo.jpg" class="footer-logo" alt="MG Transportes">
+            <div class="footer-links">
+                <a href="https://wa.me/5562981682393" target="_blank"><i class="fas fa-phone"></i> (62) 98168-2393</a>
+                <a href="https://www.instagram.com/mg_transportes01/" target="_blank"><i class="fab fa-instagram"></i> @mg_transportes01</a>
+            </div>
             <p class="copy">© 2025 MG Transportes. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
